@@ -11,6 +11,23 @@
     font-weight: normal;
     font-display: swap;
 }
+
+/* Formatação para fonte */
+@font-face {
+    font-family: 'Gobold';
+    src: url(fonts/Gobold.otf) format("truetype-variations");
+    font-weight: normal;
+    font-display: swap;
+}
+
+/* Formatação para fonte */
+@font-face {
+    font-family: 'GeosansLight';
+    src: url(fonts/GeosansLight.ttf) format("truetype-variations");
+    font-weight: normal;
+    font-display: swap;
+}
+
 body{
 	padding: 0;
 	margin: 0;
@@ -22,6 +39,7 @@ body{
 	background-image: url(images/backgroundthelastofus.png);
 	background-repeat: no repeat;
 	background-size: cover;
+	min-width: 100vw;
 }
 
 .container{
@@ -49,6 +67,9 @@ input{
 	background: transparent;
 	border-bottom: 2px solid rgba( 254, 254, 254, 0.5);
 	color: white;
+	font-family: GeosansLight;
+	font-weight: normal;
+	font-size: 10pt;
 }
 
 .input-file{
@@ -58,6 +79,9 @@ input{
 }
 
 label{
+	font-family: Gobold;
+	font-weight: normal;
+	font-size: 10pt;
 	position: absolute;
 	color: white;
 	top: 0;
@@ -70,7 +94,9 @@ input:focus{
 }
 
 input:focus + label{
-	font-weight: bold;
+	font-size: 12pt;
+	transition: 0.5s;
+	
 }
 
 button{
@@ -78,11 +104,55 @@ button{
 	background: transparent;
 	color: white;
 	border: 2px solid white;
-	border-radius: 20px;
+	border-radius: 25px;
 	text-transform: uppercase;
 	cursor: pointer;
+}
+button a{
+text-decoration: none;
+color: white;	
+font-size: 10pt;
+}	
+
+button a:hover{
+	font-size: 15pt;	
+	transition: 0.5s;
+}
+
+button:hover{
+	background: rgba(0, 0, 0, 0.5);
 }
 
 .enter{
 	text-align: center;
+}
+
+.links{
+	padding: 5px 5px 0px 5px;
+	text-align: center;
+}
+
+
+.links p {
+	padding: 5px;
+	text-align: center;
+	margin: 10px;
+}
+
+.links a{
+	text-decoration: none;
+	color: rgba(254, 254, 254, 0.5);
+}
+
+.links a:hover{
+	color: white;
+}
+
+/* Formatação ao diminuir a tela para uso mobile*/	
+@media only screen and (min-width: 300px) and (max-width: 1200px) {
+	body{
+		background-image: url(images/mobileback.jpg);
+		background-repeat: no repeat;
+		background-size: cover;
+	}
 }
